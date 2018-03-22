@@ -1,25 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Index</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phase 2</title>
 </head>
-
 <body>
-    <br><br><br>
-    <h3>Username:</h3>
-    <form action="query4.php" method="post">
-        <input type="text" name="user"> <br>
-        <input type="submit">
+
+  <div id="q1">
+    <h4>Query 1</h4><br>
+    Post with the most number of likes: 
+    <form action="../resources/query1.php" method="post">
+      <input type="submit">
     </form>
-    <br><br><br>
-    <h3>Year:</h3>
-    <form action="query5.php" method="post">
-        <input type="text" name="year"> <br>
+  </div>
+
+  <div id="q2">
+    <h4>Query 2</h4><br>
+    User with the most number of followers:
+    <form action="../resources/query2.php" method="post">
+      <input type="submit">
+    </form>
+  </div>
+
+  <div id="q3">
+      <h4>Query 3</h4><br>
+      Posts containing keyword 'flu': 
+      <form action="../resources/query3.php" method="post">
+        <input type="submit">
+      </form>
+  </div>
+
+  <div id="q4">
+    <br>
+    <h4>Query 4</h4><br>
+    Enter username to display posts:
+      <form action="../resources/query4.php" method="post">
+        <input type="text" name="user">
         <input type="submit">
     </form>
 
+  </div>
+
+  <div id="q5">
+    <br>
+    <h4>Query 5</h4>
+      Display most active user from year (enter year):
+    <form action="../resources/query5.php" method="post">
+      <input type="text" name="year">
+      <input type="submit">
+    </form>
+  </div>
+
+  <div class="login_form" id="q6">
+    <br>
+    <h4>Query 6</h4>
+    <p>* Required field</p>
+    <form action="../resources/query6.php" id="login_form" method="post">
+      <fieldset>
+        <legend>Login</legend>
+        <label for="username"><b>Username*:</b></label>
+        <input type="text" placeholder="Username" name="username" required>
+
+        <label for="pw"><b>Password*:</b></label>
+        <input type="text" placeholder="Password" name="pw" required>
+
+        <button type="submit"> Sign In </button>
+        <label>
+          <input type="checkbox" name="remember"> Remember 
+        </label>
+      </fieldset>
+    </form>
+  </div>
+    
+  <div id="q7">
+    <br>
+    <h4>Query 7</h4>
+
+  </div>
 </body>
 </html>

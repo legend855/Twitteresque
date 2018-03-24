@@ -1,15 +1,7 @@
-/*
-#query4 {
-  display: inline-block;
-  border: 1px solid black;
-  background-color: blue;
-}
 
-#query5 {
-  display: inline-block;
-  border: 1px solid black;
-}
-*/
+
+
+/*
 #u_name {
     display: block;
     padding: 2px 5px;
@@ -21,17 +13,27 @@
     padding: 2px 5px;
     box-sizing: border-box;
 }
+*/
+
+.queries {
+    padding: 2px;
+    border: 1px solid navy;
+}
 
 body {
-    background-color: powderblue;
+    background-color: lightcyan;
 }
+
 input[type=text] {
     display: inline-block;
     padding: 2px 5px;
     box-sizing: border-box;
 }
-/*
-.login_form {
+
+h4 {
+    margin-left: 5px;
+}
+
+#login_form {
     display: block;
 }
-*/

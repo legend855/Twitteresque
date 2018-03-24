@@ -2,11 +2,15 @@
 <body>
 <?php
   
+  require('../utils/connect.php');
+
   $user =  $_POST["user"];
+  /*
   $con = mysqli_connect('localhost', 'root', '')
     or die ('Could not connect: ' . mysqli_error());
   
   $mydb = mysqli_select_db ($con,'twitteresque') or die ('Could not select database');
+  */
   
   $query = "SELECT * FROM twitts 
             WHERE uid = (SELECT uid FROM user

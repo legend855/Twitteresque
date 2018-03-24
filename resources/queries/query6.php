@@ -11,7 +11,7 @@
 <body>
 <?php
     // after log in, we retain user's details
-    require('login.php');
+    require('../utils/login.php');
 
     //echo $username;
 
@@ -29,12 +29,9 @@
                               WHERE receiver_id = (SELECT uid FROM user
                                                      WHERE username='$username'))";
     
-    //echo $username;
-
     $result = mysqli_query($con, $query)
                 or die('Query failed: '. mysqli_error($con));
 
-    //
 
     // print number of results in the query?
     echo mysqli_num_rows($result);

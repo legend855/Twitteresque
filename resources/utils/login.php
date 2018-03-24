@@ -23,7 +23,7 @@
         $username = $_POST['username'];
         $password = $_POST['pw'];
 
-        // check of the username & pw values exist in database
+        // check if the username & pw values exist in database
         $query = "SELECT * FROM user 
                   WHERE username='$username' and password='$password'";
         $result = mysqli_query($con, $query) 

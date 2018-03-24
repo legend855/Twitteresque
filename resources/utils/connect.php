@@ -7,6 +7,5 @@
 
         $mydb = mysqli_select_db ($con,'twitteresque') 
                 or die ('Could not select database');
-    
-
+                
 ?>

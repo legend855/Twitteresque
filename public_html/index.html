@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Phase 2</title>
-    <link href="../resources/css/main.css" type="text/css" rel="stylesheet">
+    <link href="../src/css/main.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
   <div class="queries" id="q1">
     <h4>Query 1</h4><br>
     Post with the most number of likes: 
-    <form action="../resources/queries/query1.php" method="post">
+    <form action="../src/queries/query1.php" method="post">
       <input type="submit">
     </form>
   </div>
@@ -21,7 +21,7 @@
   <div class="queries" id="q2">
     <h4>Query 2</h4><br>
     User with the most number of followers:
-    <form action="../resources/queries/query2.php" method="post">
+    <form action="../src/queries/query2.php" method="post">
       <input type="submit">
     </form>
   </div>
@@ -29,7 +29,7 @@
   <div class="queries" id="q3">
       <h4>Query 3</h4><br>
       Posts containing keyword 'flu': 
-      <form action="../resources/queries/query3.php" method="post">
+      <form action="../src/queries/query3.php" method="post">
         <input type="submit">
       </form>
   </div>
@@ -38,7 +38,7 @@
     <br>
     <h4>Query 4</h4><br>
     Enter username to display posts:
-      <form action="../resources/queries/query4.php" method="post">
+      <form action="../src/queries/query4.php" method="post">
         <input type="text" name="user">
         <input type="submit">
     </form>
@@ -49,7 +49,7 @@
     <br>
     <h4>Query 5</h4>
       Display most active user from year (enter year):
-    <form action="../resources/queries/query5.php" method="post">
+    <form action="../src/queries/query5.php" method="post">
       <input type="text" name="year">
       <input type="submit">
     </form>
@@ -60,7 +60,7 @@
     <h4>Query 6</h4>
       Sign in to display all senders in your inbox
     <p>* Required field</p>
-    <form action="../resources/queries/query6.php" id="login_form" method="post">
+    <form action="../src/queries/query6.php" id="login_form" method="post">
       <fieldset>
         <legend>Login</legend>
         <label for="username"><b>Username*:</b></label>
@@ -81,6 +81,17 @@
     <br>
     <h4>Query 7</h4>
       Sign in to post a tweet.
+      <legend>Login</legend>
+        <label for="username"><b>Username*:</b></label>
+        <input type="text" placeholder="Username" name="username" required>
+
+        <label for="pw"><b>Password*:</b></label>
+        <input type="text" placeholder="Password" name="pw" required>
+
+        <button type="submit"> Sign In </button>
+        <label>
+          <input type="checkbox" name="remember"> Remember 
+        </label>
   </div>
 </body>
 </html>

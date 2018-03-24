@@ -47,9 +47,11 @@
         echo "<br>";
         $count++;
     }
+    echo "<br>";
+    echo "<a href=\"../utils/logout.php\'><button> Logout</button></a>";
     mysqli_free_result($result);
     mysqli_close($con);
-
+    
 
 ?>
 

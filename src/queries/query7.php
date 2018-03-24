@@ -17,10 +17,8 @@
     // get tweet contents form input
     $msg = 1;
     
-    $query = "SELECT username FROM user
-              WHERE uid IN (SELECT sender_id FROM message 
-                              WHERE receiver_id = (SELECT uid FROM user
-                                                     WHERE username='$username'))";
+    $query = "INSERT INTO twitts (body)
+                VALUES ('$msg')";
     
     $result = mysqli_query($con, $query)
                 or die('Query failed: '. mysqli_error($con));
@@ -39,6 +37,9 @@
     }
     mysqli_free_result($result);
     mysqli_close($con);
+    
+    
+    require('logout.php');
 
 
 ?>

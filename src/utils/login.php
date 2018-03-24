@@ -42,7 +42,7 @@
         if(isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
             echo "Hi  . $username . ";
-            echo "<a href='logout.php'>Logout</a>";
+            
         }
 
     }

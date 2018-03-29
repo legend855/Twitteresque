@@ -13,7 +13,7 @@
 
   <div class="queries" id="q1">
     <h4>Query 1</h4><br>
-    Post with the most number of likes: 
+    Post with the most number of likes:
     <form action="../src/queries/query1.php" method="post">
       <input type="submit" />
     </form>
@@ -29,7 +29,7 @@
 
   <div class="queries" id="q3">
       <h4>Query 3</h4><br>
-      Posts containing keyword 'flu': 
+      Posts containing keyword 'flu':
       <form action="../src/queries/query3.php" method="post">
         <input type="submit" />
       </form>
@@ -77,7 +77,7 @@
       </fieldset>
     </form><br><br>
   </div>
-    
+
   <div class="queries" id="q7">
     <br>
     <h4>Query 7</h4>
@@ -97,12 +97,42 @@
         <button type="submit"> Sign In </button>
         
         <label>
-          <input type="checkbox" name="remember" /> Remember 
+          <input type="checkbox" name="remember" /> Remember
         </label><br>
         
         <textarea rows="4" cols="50" name="tweet_body"></textarea>
 
       </form>
   </div>
+
+  <div class="queries" id="q8">
+    <br>
+    <h4>Query 8</h4>
+      Sign in to follow/unfollow a user.
+      <p>* Required field</p>
+      <form action="../src/queries/query8.php" id="login_form" method="post">
+
+        <label for="otheruser"><b>User*:</b></label>
+        <input type="text" name="otheruser" /> <br>
+        <input type="radio" name="follow" value = "follow" checked = ""/> Follow <br>
+        <input type="radio" name="follow" value = "unfollow"/> Unfollow <br>
+
+
+
+        <fieldset>
+          <legend>Login</legend>
+          <label for="username"><b>Username*:</b></label>
+          <input type="text" placeholder="Username" name="username" required />
+
+          <label for="pw"><b>Password*:</b></label>
+          <input type="text" placeholder="Password" name="pw" required />
+
+          <button type="submit"> Sign In </button>
+          <label>
+            <input type="checkbox" name="remember" /> Remember
+          </label>
+        </fieldset>
+      </form><br><br>
+    </div>
 </body>
 </html>

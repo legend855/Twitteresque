@@ -8,7 +8,7 @@
 </head>
 
 <body>
- 
+
 <?php
 /*
     $con = mysqli_connect('localhost', 'root', '') or die ('Could not connect: ' . mysqli_error());
@@ -24,9 +24,9 @@
         $password = $_POST['pw'];
 
         // check if the username & pw values exist in database
-        $query = "SELECT * FROM user 
+        $query = "SELECT * FROM user
                   WHERE username='$username' and password='$password'";
-        $result = mysqli_query($con, $query) 
+        $result = mysqli_query($con, $query)
                     or die(mysqli_error($con) );
         $count = mysqli_num_rows($result);
 
@@ -41,8 +41,9 @@
 
         if(isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
-            echo "Hi  . $username . ";
-            
+            echo "Hi $username . ";
+            echo "<br>";
+
         }
 
     }

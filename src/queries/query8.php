@@ -12,31 +12,16 @@
   <?php
   // after log in, we retain user's details
 
-
   require('../utils/login.php');
 
-
-  $otheruser =  $_POST['otheruser'];
-
-
-  $queryYourUID = "SELECT *
-  FROM user
-  WHERE username = '$username'";
+  $otherUser = $_POST['otheruser'];
 
   $queryOtherUID = "SELECT *
   FROM user
-  WHERE username = '$otheruser'";
-
-  $resultYourUID = mysqli_query($con, $queryYourUID)
-  or die('Query failed: '. mysqli_error($con));
+  WHERE username = '$otherUser'";
 
   $resultOtherUID = mysqli_query($con, $queryOtherUID)
   or die('Query failed: '. mysqli_error($con));
-
-  while ($row=mysqli_fetch_array($resultYourUID, MYSQLI_ASSOC))
-  {
-    $yourUid = $row["uid"];
-  }
 
   while ($row=mysqli_fetch_array($resultOtherUID, MYSQLI_ASSOC))
   {
@@ -51,13 +36,13 @@
     $result3 = mysqli_query($con, $queryFollow)
     or die('Error: Already following this user');
     echo "<br>";
-    echo "Successfully unfollowed $otheruser";
+    echo "Successfully unfollowed $otherUser";
   }
-  else if($_POST['follow'] == "unfollow"){
+  else{
     $result3 = mysqli_query($con, $queryUnfollow)
     or die('Error: Not following this user');
     echo "<br>";
-    echo "Successfully unfollowed $otheruser";
+    echo "Successfully unfollowed $otherUser";
   }
 
 

@@ -13,22 +13,12 @@
     // after log in, we retain user's details
     require('../utils/login.php');
 
-    //echo $username;
 
-    // usernames who's ids match those in user's inbox
-    /*
-    $query = "SELECT username 
-                FROM user u, message m
-                WHERE m.sender_id = u.uid
-                AND u.username = '$username'";
-    */
-    
-    
     $query = "SELECT username FROM user
-              WHERE uid IN (SELECT sender_id FROM message 
+              WHERE uid IN (SELECT sender_id FROM message
                               WHERE receiver_id = (SELECT uid FROM user
                                                      WHERE username='$username'))";
-    
+
     $result = mysqli_query($con, $query)
                 or die('Query failed: '. mysqli_error($con));
 
@@ -51,11 +41,11 @@
     echo "<a href=\"../utils/logout.php\'><button> Logout</button></a>";
     mysqli_free_result($result);
     mysqli_close($con);
-    
+
 
 ?>
 
-    
-    
+
+
 </body>
 </html>

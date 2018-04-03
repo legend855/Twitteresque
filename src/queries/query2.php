@@ -1,17 +1,9 @@
 <html>
 <body>
 <?php
-  
+
   require('../utils/connect.php');
   
-  /*
-  $con = mysqli_connect('localhost', 'root', '')
-    or die ('Could not connect: ' . mysqli_error());
-  echo 'Connected successfully<br><br>';
-
-  $mydb = mysqli_select_db ($con,'twitter') or die ('Could not select database');
-  */
-
   $query = 'SELECT * FROM user WHERE uid IN
                 (SELECT following_id FROM follow GROUP BY following_id HAVING COUNT(follower_id)>=ALL(
                         SELECT COUNT(follower_id) FROM follow GROUP BY following_id))';
@@ -25,7 +17,7 @@
 
   mysqli_free_result($result);
   mysqli_close($con);
-  
+
 ?>
 
 </body>

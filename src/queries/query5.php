@@ -1,27 +1,24 @@
 <html>
 <body>
   <?php
-  
+
   require('../utils/connect.php');
+
   $year =  $_POST["year"];
 
-  /*
-  $con = mysqli_connect('localhost', 'root', '')
-  or die ('Could not connect: ' . mysqli_error());
-
-  $mydb = mysqli_select_db ($con,'twitter') or die ('Could not select database');
-  */
-  $query = "SELECT * FROM user
-            WHERE uid IN(SELECT uid 
-			 FROM(SELECT * FROM twitts
+  $query = "SELECT *
+            FROM user
+            WHERE uid IN(SELECT uid
+			                   FROM(SELECT * FROM twitts
                               WHERE post_time >= '".$year."-01-01'
                                AND post_time <= '".$year."-12-31') AS T1
-                              GROUP BY uid
-				HAVING COUNT(tid) >= ALL(SELECT COUNT(tid)
-                                                          FROM(SELECT * FROM twitts
-                                                               WHERE post_time >= '".$year."-01-01'
-                                                                AND post_time <= '".$year."-12-31') AS T2
-                                                                GROUP BY uid))";
+                         GROUP BY uid
+				                 HAVING COUNT(tid) >= ALL(SELECT COUNT(tid)
+                                                  FROM(SELECT *
+                                                       FROM twitts
+                                                       WHERE post_time >= '".$year."-01-01'
+                                                       AND post_time <= '".$year."-12-31') AS T2
+                                                  GROUP BY uid))";
 
   $result = mysqli_query($con,$query) or die ('Query failed: ' . mysqli_error($con));
 

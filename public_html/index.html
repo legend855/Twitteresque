@@ -134,5 +134,68 @@
         </fieldset>
       </form><br><br>
     </div>
+
+    <div class="queries" id="q9">
+      <br>
+      <h4>Query 9</h4>
+        Sign in to post a comment.
+        <p>* Required field</p>
+
+        <form action="../src/queries/query9.php" id="login_form" method="post">
+
+        <legend>Login</legend>
+
+        <label for="username"><b>Username*:</b></label>
+          <input type="text" placeholder="Username" name="username" required />
+
+          <label for="pw"><b>Password*:</b></label>
+          <input type="text" placeholder="Password" name="pw" required />
+
+          <button type="submit"> Sign In </button>
+
+          <label>
+            <input type="checkbox" name="remember" /> Remember
+          </label><br>
+
+          <label for="pw"><b>Parent Tweet ID*:</b></label>
+          <input type="text" placeholder="tid" name="tid" required />
+
+          <br>Comment:<br>
+
+          <textarea rows="4" cols="50" name="comment_body"></textarea>
+
+        </form>
+    </div>
+
+    <div class="queries" id="q10">
+      <br>
+      <h4>Query 10</h4>
+        Sign in to delete a comment.
+        <p>* Required field</p>
+
+        <form action="../src/queries/query10.php" id="login_form" method="post">
+
+        <legend>Login</legend>
+
+        <label for="username"><b>Username*:</b></label>
+          <input type="text" placeholder="Username" name="username" required />
+
+          <label for="pw"><b>Password*:</b></label>
+          <input type="text" placeholder="Password" name="pw" required />
+
+          <button type="submit"> Sign In </button>
+
+          <label>
+            <input type="checkbox" name="remember" /> Remember
+          </label><br>
+
+          <label for="pw"><b>Parent Tweet ID*:</b></label>
+          <input type="text" placeholder="tid" name="tid" required />
+
+          <label for="pw"><b>Comment ID*:</b></label>
+          <input type="text" placeholder="cid" name="cid" required />
+
+        </form>
+    </div>
 </body>
 </html>

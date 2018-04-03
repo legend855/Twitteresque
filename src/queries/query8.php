@@ -59,9 +59,6 @@
     echo "<br>";
     echo "Successfully unfollowed $otheruser";
   }
-  else{
-
-  }
 
 
   echo "<br>";

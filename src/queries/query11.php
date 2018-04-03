@@ -4,33 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Query 7</title>
+  <title>Query 11</title>
 </head>
 
 
 <body>
   <?php
-  // after log in, we retain user's details
 
+  require('../utils/connect.php');
 
-  require('../utils/login.php');
-  if($validUser){
-  $tweetBody =  $_POST['tweet_body'];
+  $username =  $_POST['username'];
+  $password =  $_POST['pw'];
+  $email =  $_POST['email'];
+  $location =  $_POST['location'];
 
-  $queryTweet = "INSERT into twitts values(null,'$yourUid', '$tweetBody', NOW())";
+  $queryUser = "INSERT into user values(null,'$username', '$password', '$email', '$location', NOW())";
 
-  $resultTweet = mysqli_query($con, $queryTweet)
+  $resultUser = mysqli_query($con, $queryUser)
   or die('Query failed: '. mysqli_error($con));
 
 
   echo "<br>";
+  echo "New user successfully created <br>";
   echo "<a href=\"../utils/logout.php\'><button> Logout</button></a>";
-  mysqli_free_result($result);
   mysqli_close($con);
-}
-else{
-  echo $fmsg;
-}
 
 
   ?>

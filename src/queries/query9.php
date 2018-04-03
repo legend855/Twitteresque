@@ -15,6 +15,7 @@
 
   require('../utils/login.php');
 
+  if($validUser){
   //fetch values for comment body and tweet id
   $commentBody =  $_POST['comment_body'];
   $parentTid = $_POST['tid'];
@@ -29,7 +30,10 @@
   echo "<a href=\"../utils/logout.php\'><button> Logout</button></a>";
   mysqli_free_result($result);
   mysqli_close($con);
-
+}
+else{
+  echo $fmsg;
+}
 
   ?>
 

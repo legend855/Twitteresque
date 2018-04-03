@@ -15,22 +15,10 @@
 
   require('../utils/login.php');
 
-
+  //fetch values for comment body and tweet id
   $commentBody =  $_POST['comment_body'];
   $parentTid = $_POST['tid'];
 
-
-  $queryYourUID = "SELECT *
-  FROM user
-  WHERE username = '$username'";
-
-  $resultYourUID = mysqli_query($con, $queryYourUID)
-  or die('Query failed: '. mysqli_error($con));
-
-  while ($row=mysqli_fetch_array($resultYourUID, MYSQLI_ASSOC))
-  {
-    $yourUid = $row["uid"];
-  }
   $queryComment = "INSERT into comment values(null,'$yourUid', '$parentTid', '$commentBody', NOW())";
 
   $resultComment = mysqli_query($con, $queryComment)

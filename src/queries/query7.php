@@ -17,18 +17,6 @@
 
   $tweetBody =  $_POST['tweet_body'];
 
-  $queryYourUID = "SELECT *
-  FROM user
-  WHERE username = '$username'";
-
-  $resultYourUID = mysqli_query($con, $queryYourUID)
-  or die('Query failed: '. mysqli_error($con));
-
-  while ($row=mysqli_fetch_array($resultYourUID, MYSQLI_ASSOC))
-  {
-    $yourUid = $row["uid"];
-  }
-
   $queryTweet = "INSERT into twitts values(null,'$yourUid', '$tweetBody', NOW())";
 
   $resultTweet = mysqli_query($con, $queryTweet)

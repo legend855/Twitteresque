@@ -1,6 +1,8 @@
 
 Twitteresque
 
+Authors: Patrick Kyoyetera, Kevin Strathdee
+
 This is a Database project for a web application that implements a model of the Twitter database.
 
 the project is organized in two folders: public_html, and src. public_html contains the user interface to access the queries in the form of index.html. src contains three folders; css (containing the stylesheet for the project), queries (containing the php files associated with all the sql queries that we have implemented), and utils (which contains three php files that are used throughout the project; login, logout, and connect).

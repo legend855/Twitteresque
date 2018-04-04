@@ -14,7 +14,7 @@
 
 
   require('../utils/login.php');
-
+  if($validUser){
   $tweetBody =  $_POST['tweet_body'];
 
   $queryTweet = "INSERT into twitts values(null,'$yourUid', '$tweetBody', NOW())";
@@ -24,6 +24,11 @@
 
   mysqli_free_result($result);
   mysqli_close($con);
+
+}
+else{
+  echo $fmsg;
+}
   
   session_destroy();
   

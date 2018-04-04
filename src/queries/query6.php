@@ -12,7 +12,7 @@
 <?php
     // after log in, we retain user's details
     require('../utils/login.php');
-
+    if($validUser){
 
     $query = "SELECT username FROM user
               WHERE uid IN (SELECT sender_id FROM message
@@ -39,6 +39,11 @@
     }
     mysqli_free_result($result);
     mysqli_close($con);
+
+  }
+  else{
+    echo $fmsg;
+  }
     
     session_destroy();
     
@@ -46,8 +51,6 @@
     echo "<a href=../utils/logout.php><button> Logout</button></a>";
 
 ?>
-
-
 
 </body>
 </html>

@@ -14,11 +14,12 @@
 
   require('../utils/login.php');
 
+  if($validUser){
   $otherUser = $_POST['otheruser'];
 
   $queryOtherUID = "SELECT *
-  FROM user
-  WHERE username = '$otherUser'";
+                    FROM user
+                    WHERE username = '$otherUser'";
 
   $resultOtherUID = mysqli_query($con, $queryOtherUID)
   or die('Query failed: '. mysqli_error($con));
@@ -47,6 +48,12 @@
 
   mysqli_free_result($result);
   mysqli_close($con);
+
+}
+else{
+  echo $fmsg;
+}
+
   
   session_destroy();
   

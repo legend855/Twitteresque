@@ -197,5 +197,98 @@
 
         </form>
     </div>
+
+    <div class="queries" id="q11">
+      <br>
+      <h4>Query 11</h4>
+        Create new user.
+        <p>* Required field</p>
+
+        <form action="../src/queries/query11.php" id="login_form" method="post">
+
+        <legend>Login</legend>
+
+        <label for="username"><b>Username*:</b></label>
+          <input type="text" placeholder="Username" name="username" required />
+
+          <br>
+
+          <label for="pw"><b>Password*:</b></label>
+          <input type="text" placeholder="Password" name="pw" required />
+
+          <br>
+
+          <label for="email"><b>Email*:</b></label>
+          <input type="text" placeholder="Email" name="email" required />
+
+          <br>
+
+          <label for="location"><b>Location (City, State)*:</b></label>
+          <input type="text" placeholder="Location" name="location" required />
+
+          <br>
+
+          <button type="submit"> Create New Account </button>
+
+        </form>
+    </div>
+
+    <div class="queries" id="q12">
+      <br>
+      <h4>Query 12</h4>
+        Sign in to change password.
+        <p>* Required field</p>
+
+        <form action="../src/queries/query12.php" id="login_form" method="post">
+
+        <legend>Login</legend>
+
+        <label for="username"><b>Username*:</b></label>
+          <input type="text" placeholder="Username" name="username" required />
+
+          <label for="pw"><b>Password*:</b></label>
+          <input type="text" placeholder="Password" name="pw" required />
+
+          <button type="submit"> Sign In </button>
+
+          <label>
+            <input type="checkbox" name="remember" /> Remember
+          </label><br>
+
+          <label for="new_pw"><b>Password*:</b></label>
+          <input type="text" placeholder="New Password" name="new_pw" required />
+
+
+        </form>
+    </div>
+
+    <div class="queries" id="q13">
+      <br>
+      <h4>Query 13</h4>
+        Sign in to delete a tweet. You may only delete a tweet that you posted.
+        <p>* Required field</p>
+
+        <form action="../src/queries/query13.php" id="login_form" method="post">
+
+        <legend>Login</legend>
+
+        <label for="username"><b>Username*:</b></label>
+          <input type="text" placeholder="Username" name="username" required />
+
+          <label for="pw"><b>Password*:</b></label>
+          <input type="text" placeholder="Password" name="pw" required />
+
+          <button type="submit"> Sign In </button>
+
+          <label>
+            <input type="checkbox" name="remember" /> Remember
+          </label><br>
+
+          <label for="pw"><b>Tweet ID*:</b></label>
+          <input type="text" placeholder="tid" name="tid" required />
+
+        </form>
+    </div>
+
 </body>
 </html>

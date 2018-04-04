@@ -17,29 +17,26 @@
 
 if($validUser){
 
-  //fetch values for parent tweet id and comment id
-  $parentTid = $_POST['tid'];
-  $commentID = $_POST['cid'];
+  //fetch value for tid
+  $tid = $_POST['tid'];
 
-  $deleteComment = "DELETE from comment where cid = '$commentID' and uid = '$yourUid' and tid = '$parentTid'";
+  $deleteComment = "DELETE from twitts where tid = '$tid' and uid = '$yourUid'";
 
   $resultComment = mysqli_query($con, $deleteComment)
   or die('Query failed: '. mysqli_error($con));
 
+
+  echo "<br>";
+  echo "<a href=\"../utils/logout.php\'><button> Logout</button></a>";
   mysqli_free_result($result);
   mysqli_close($con);
-
 }
 else{
   echo $fmsg;
 }
 
-  session_destroy();
-  
-  echo "<br>";
-  echo "<a href=../utils/logout.php><button> Logout</button></a>";
 
-?>
+  ?>
 
 
 

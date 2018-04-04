@@ -26,18 +26,20 @@ if($validUser){
   $resultComment = mysqli_query($con, $deleteComment)
   or die('Query failed: '. mysqli_error($con));
 
-
-  echo "<br>";
-  echo "<a href=\"../utils/logout.php\'><button> Logout</button></a>";
   mysqli_free_result($result);
   mysqli_close($con);
+
 }
 else{
   echo $fmsg;
 }
 
+  session_destroy();
+  
+  echo "<br>";
+  echo "<a href=../utils/logout.php><button> Logout</button></a>";
 
-  ?>
+?>
 
 
 

@@ -2,7 +2,7 @@
 
 <?php
     //session_start();
-    session_destroy();
-    header('Location: login.php');
+    echo "Logged out successfully!"
+    //header('Location: login.php');
 ?>
 

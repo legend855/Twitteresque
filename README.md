@@ -13,6 +13,6 @@ index.html acts as a portal to all of the queries. queries are organized on this
 The ten assigned queries have been completed, and in addition we have included extra queries
 as defined below to add expanded functionality to the project:
 
-query 11: create a new user Account
-query 12: change a users Password
+query 11: create a new user Account <br />
+query 12: change a users Password <br />
 query 13: delete a tweet. Will also delete comments on that tweet.
